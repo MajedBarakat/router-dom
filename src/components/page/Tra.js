@@ -4,6 +4,7 @@ import YouTube,{YouTubeProps} from 'react-youtube'
 
 const Tra = ({movies}) => {
     const {id} = useParams()
+    const movie = movies.find((movie)=>movie.id === +id)
     const onPlayerReady: YouTubeProps['onReady'] = (event) => {
         // access to player in all event handlers via event.target
         event.target.pauseVideo();
@@ -17,7 +18,7 @@ const Tra = ({movies}) => {
           autoplay: 1,
         },
       };
-      const movie = movies.find((movie)=>movie.id === +id)
+
   return (
     <div>
         <h3>{movie.name}</h3>

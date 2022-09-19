@@ -2,11 +2,10 @@ import React from 'react';
 import {Card} from 'react-bootstrap';
 import Rating from '@mui/material/Rating';
 import {Link} from 'react-router-dom';
-import { Movie } from '@mui/icons-material';
 
 function MovieCard({x}) {
   return (
-    <Link to={`tra/${Movie.id}`}>
+    <Link to={`/movies/tra/${x.id}`}>
     
       
       <Card style={{ width: '18rem' }}>
